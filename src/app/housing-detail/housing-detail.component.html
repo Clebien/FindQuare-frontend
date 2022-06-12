@@ -1,0 +1,11 @@
+<div class="container" *ngIf="housing$ |async as housing">
+    <div class="rounded-lg shadow-md bg-slate-50">
+        <div class="m-4 p-3">
+            <img class="rounded-xl" [src]="housing.images" [alt]="housing.description">
+            <p>{{ housing.description }}</p>
+            <p>{{ housing.price | currency: 'EUR' }}</p>
+            <p>Mise en ligne le {{ housing.publication | date: 'dd/MM/yyyy'}}</p>
+        </div>
+    </div>
+</div>
+
